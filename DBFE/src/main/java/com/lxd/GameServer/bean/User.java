@@ -6,6 +6,15 @@ package com.lxd.GameServer.bean;
 public class User {
     private int id;
     private String name;
+    private int NO;
+
+    public int getNO() {
+        return NO;
+    }
+
+    public void setNO(int NO) {
+        this.NO = NO;
+    }
 
     public String getName() {
         return name;

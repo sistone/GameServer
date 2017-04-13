@@ -20,7 +20,9 @@ public class App
             SqlSession sqlSession = Mybatis.getInstance().getSqlSession();
             //UserMapper mapper = sqlSession.getMapper(UserMapper.class);
             //User user = mapper.findById(2012001);
-            User user = sqlSession.selectOne("findById", 2012001);
+            User user1 = new User();
+            user1.setNO(2012001);
+            User user = sqlSession.selectOne("findById", user1);
             System.out.println(user.getId());
         } catch (Exception e) {
             e.printStackTrace();
