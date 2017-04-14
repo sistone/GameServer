@@ -31,4 +31,9 @@ public class Mybatis {
     public SqlSession getSqlSession(){
         return sqlSessionFactory.openSession();
     }
+
+    public Class getAlias(String className)
+    {
+        return sqlSessionFactory.getConfiguration().getTypeAliasRegistry().getTypeAliases().get(className);
+    }
 }
